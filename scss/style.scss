@@ -1,0 +1,135 @@
+$display: inline-block;
+$font-family: 'Kdam Thmor Pro', sans-serif;
+$text-align: center;
+$border-between-boxes: 2px;
+$font-two-rem: 2rem;
+$border-radius: 40px;
+$padding: 10px;
+$margin: 30px;
+$shape-margin: 12.5px;
+$timer-game-width: 701px;
+$white-text: white;
+$black-border: 4px solid black;
+$circle-width-height: 100px;
+$triangle-border-left-right: 50px solid transparent;
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+body {
+    text-align: $text-align;
+    /* Image by "https://pixabay.com/users/goodlynx-135214/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2817099"
+    Alex S. from "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2817099" Pixabay */
+    background-image: url("CircleAndTriangle.jpg");
+    background-size: 25%;
+}
+
+h1 {
+    display: $display;
+    font-family: $font-family;
+    font-size: 3rem;
+    background-color: yellow;
+    padding: $padding;
+    margin: $margin;
+    border: $black-border;
+}
+
+#top-buttons {
+    display: $display;
+}
+
+#round-score-highscore-and-timer {
+    font-family: $font-family;
+    font-size: $font-two-rem;
+}
+
+#round, #score, #high-score, #timer {
+    display: $display;
+    width: 231px;
+    height: 99px;
+    background-color: purple;
+    color: $white-text;
+    border: $black-border;
+    border-bottom-width: $border-between-boxes;
+    border-radius: $border-radius;
+}
+
+#round {
+    border-right-width: $border-between-boxes;
+}
+
+#score {
+    border-left-width: $border-between-boxes;
+    border-right-width: $border-between-boxes;
+}
+
+#high-score {
+    border-left-width: $border-between-boxes;
+}
+
+#timer {
+    width: $timer-game-width;
+    background-color: yellow;
+    color: black;
+    border-top-width: $border-between-boxes;
+}
+
+#game-area-div {
+    font-size: 0rem;
+    display: $display;
+    width: $timer-game-width;
+    height: 750px;
+    border: $black-border;
+    border-top-width: $border-between-boxes;
+    border-radius: $border-radius;
+    background-color: tan;
+}
+
+.question-and-answer {
+    font-family: $font-family;
+    font-size: $font-two-rem;
+    text-align: $text-align;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.game-button {
+    font-family: $font-family;
+    font-size: $font-two-rem;
+    padding: $padding;
+    border: $black-border;
+    border-radius: $border-radius;
+    margin: $margin;
+    color: dimgray;
+    &:hover {
+        background-color: gray;
+        color: yellow;
+        transition: 0.5s;
+    }
+    &:active {
+        background-color: darkgreen;
+        color: $white-text;
+        transition: 0s;
+    }
+}
+
+.circle {
+    display: $display;
+    width: $circle-width-height;
+    height: $circle-width-height;
+    margin: $shape-margin;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.triangle {
+    display: $display;
+    border-left: $triangle-border-left-right;
+    border-right: $triangle-border-left-right;
+    border-bottom: 100px solid black;
+    margin: $shape-margin;
+}
